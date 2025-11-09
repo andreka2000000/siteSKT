@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Смоленский колледж телекоммуникаций - Главная</title>
-    <style>
-        /* Сброс стилей и базовые настройки */
+    <head>
+        <style>
+            /* Сброс стилей и базовые настройки */
         * {
             margin: 0;
             padding: 0;
@@ -578,62 +575,9 @@
                 font-size: 1.5rem;
             }
         }
-    </style>
-</head>
-<body>
-    <!-- Шапка сайта -->
-    <header>
-        <div class="container">
-            <div class="header-top">
-                <div class="logo">
-                    <div style="width: 60px; height: 60px; margin-right: 70px; margin-bottom: 50px;">
-                        <img src="logo.svg" style="width: 200%; height: 200%; object-fit: cover;">
-                    </div>
-                    <div class="logo-text">
-                        <h1>Смоленский колледж телекоммуникаций</h1>
-                        <p>(филиал) Санкт-Петербургского государственного университета телекоммуникаций имени профессора М. А. Бонч-Бруевича</p>
-                    </div>
-                </div>
-                <div class="contact-info">
-                    <p>г. Смоленск, ул. Коммунистическая, 21</p>
-                    <p class="phone">+7 (4812) 38-90-68</p>
-                    <p>pk@collegetel.ru</p>
-                </div>
-            </div>
-        </div>
-        <nav>
-            <div class="container nav-container">
-                <button class="mobile-menu-btn">☰</button>
-                <ul class="main-nav">
-                    <li><a href="#">Главная</a></li>
-                    <li>
-                        <a href="#">О колледже</a>
-                        <ul class="dropdown">
-                            <li><a href="#">История</a></li>
-                            <li><a href="#">Администрация</a></li>
-                            <li><a href="#">Документы</a></li>
-                            <li><a href="#">Вакансии</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Абитуриенту</a>
-                        <ul class="dropdown">
-                            <li><a href="#">Специальности</a></li>
-                            <li><a href="#">Приёмная комиссия</a></li>
-                            <li><a href="#">Подготовительные курсы</a></li>
-                            <li><a href="#">Часто задаваемые вопросы</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Студенту</a></li>
-                    <li><a href="#">Преподавателю</a></li>
-                    <li><a href="#">Новости</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Главный слайдер -->
+        </style>
+    </head>
+<!-- Главный слайдер -->
     <section class="hero">
         <div class="hero-slide active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://avatars.mds.yandex.net/i?id=703f4c9ab5329a659369b7c067b8db22255c0d1d-12753060-images-thumbs&n=13');">
             <div class="hero-content">
@@ -652,12 +596,12 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>Без прошлого нет будущего, и это хорошо понимает руководство нашего колледжа, дорожа его историей, сохраняя преемственность традиций. В нашем музее этап за этапом отображен весь путь учебного заведения, начиная с момента его создания.</p>
-                    <a href="#" class="btn">Подробнее о колледже</a>
+                    <a href="#" class="btn" id="btnMoreHistory">Подробнее о колледже</a>
                 </div>
                 <div class="about-image">
                     <!-- Замените на реальное изображение -->
                     <div style="width: 100%; height: 100%;">
-                        <img src="фото колледжа.jpg" style="width: 100%; height: 100%;">
+                        <img src="../PICs/фото колледжа.jpg" style="width: 100%; height: 100%;">
                     </div>
                 </div>
             </div>
@@ -772,57 +716,10 @@
                 </div>
                 <div class="map">
                     <div style="width: 100%; height: 100%;">
-                        <img src="карта колледжа.png" style="width: 125%; height: 100%;">
+                        <img src="../PICs/карта колледжа.png" style="width: 125%; height: 100%;">
                     </div>"
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Футер -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Смоленский колледж телекоммуникаций</h3>
-                    <p>филиал Санкт-Петербургского государственного университета телекоммуникаций имени профессора М. А. Бонч-Бруевича</p>
-                    <div class="social-links">
-                        <a href="#" title="ВКонтакте">VK</a>
-                        <a href="#" title="Telegram">TG</a>
-                        <a href="#" title="YouTube">YT</a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Быстрые ссылки</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Главная</a></li>
-                        <li><a href="#">О колледже</a></li>
-                        <li><a href="#">Абитуриенту</a></li>
-                        <li><a href="#">Студенту</a></li>
-                        <li><a href="#">Новости</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Контакты</h3>
-                    <ul class="footer-links">
-                        <li><a href="https://yandex.ru/maps/12/smolensk/house/kommunisticheskaya_ulitsa_21/Z0sYdgJnS0cCQFtufXt5cX5iYg==/?ll=32.057226%2C54.780216&z=16" rel="noopener noreferrer">г. Смоленск, ул. Коммунистическая, д. 21</a></li>
-                        <li><a href="#">+7 (4812) 38-90-68</a></li>
-                        <li><a href="#">pk@collegetel.ru</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Организации</h3>
-                    <ul class="footer-links">
-                        <li><a href="https://digital.gov.ru/ru/" target="_blank" rel="noopener noreferrer">Минцифры России</a></li>
-                        <li><a href="https://edu.gov.ru" target="_blank" rel="noopener noreferrer">Минпросвещения России</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>© СКТ(ф)СПбГУТ 2025</p>
-            </div>
-        </div>
-    </footer>
-     <script src="back.js"></script>
-</body>
 </html>

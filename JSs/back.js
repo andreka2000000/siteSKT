@@ -1,7 +1,18 @@
+//сделать контейнер в front.html и менять в нём html-файлы с помощью кнопок навигации
+
 document.getElementById("btnZayav").addEventListener('click', function() {
-    window.open("подача заявления.html", '_blank')
+    window.location.href = "подача заявления.html"
 })
 
+document.getElementById("btnHistory").addEventListener('click', function(){
+    window.location.href = "история колледжа.html"
+})
+
+document.getElementById("btnMoreHistory").addEventListener('click', function(){
+    window.location.href = "история колледжа.html"
+})
+
+//говядина
 document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
             document.querySelector('.main-nav').classList.toggle('active');
         });
@@ -14,9 +25,3 @@ document.querySelector('.mobile-menu-btn').addEventListener('click', function() 
             slides.forEach(slide => slide.classList.remove('active'));
             slides[n].classList.add('active');
         }
-        
-        // Автопереключение слайдов
-        setInterval(() => {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }, 5000);
