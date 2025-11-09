@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подача заявления на поступление</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .required::after {
+            content: " *";
+            color: #e74c3c;
+        }
+        
+        .btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 30px auto 0;
+            width: 200px;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        @media (max-width: 600px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Заявление на поступление</h1>
+        
+        <form id="admissionForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="lastName" class="required">Фамилия</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="firstName" class="required">Имя</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="middleName">Отчество</label>
+                <input type="text" id="middleName" name="middleName">
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="birthDate" class="required">Дата рождения</label>
+                    <input type="date" id="birthDate" name="birthDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender" class="required">Пол</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Выберите пол</option>
+                        <option value="male">Мужской</option>
+                        <option value="female">Женский</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email" class="required">Электронная почта</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone" class="required">Телефон</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="address" class="required">Адрес проживания</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="faculty" class="required">Факультет</label>
+                <select id="faculty" name="faculty" required>
+                    <option value="">Выберите факультет</option>
+                    <option value="engineering">Инженерный факультет</option>
+                    <option value="economics">Экономический факультет</option>
+                    <option value="law">Юридический факультет</option>
+                    <option value="medicine">Медицинский факультет</option>
+                    <option value="arts">Факультет искусств</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="specialty" class="required">Специальность</label>
+                <select id="specialty" name="specialty" required>
+                    <option value="">Выберите специальность</option>
+                    <option value="computer-science">Информатика</option>
+                    <option value="mechanical-engineering">Машиностроение</option>
+                    <option value="finance">Финансы</option>
+                    <option value="international-law">Международное право</option>
+                    <option value="pediatrics">Педиатрия</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="education" class="required">Образование</label>
+                <select id="education" name="education" required>
+                    <option value="">Выберите уровень образования</option>
+                    <option value="secondary">Среднее образование</option>
+                    <option value="college">Среднее специальное</option>
+                    <option value="bachelor">Бакалавриат</option>
+                    <option value="master">Магистратура</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="documents">Дополнительные документы (при наличии)</label>
+                <input type="file" id="documents" name="documents" multiple>
+            </div>
+            
+            <div class="form-group">
+                <label for="comments">Комментарии</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Дополнительная информация, которую вы хотели бы сообщить"></textarea>
+            </div>
+            
+            <button type="submit" class="btn">Подать заявление</button>
+        </form>
+        
+        <div id="successMessage" class="success-message">
+            Ваше заявление успешно отправлено! Мы свяжемся с вами в ближайшее время.
+        </div>
+    </div>
+</body>
+</html>
